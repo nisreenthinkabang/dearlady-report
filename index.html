@@ -169,7 +169,7 @@
 
     <div class="stats">
       <div class="stat"><div class="v">10<span class="u">+ ร้าน</span></div><div class="l">คู่แข่งทำผมรอบร้านคุณ (Google Maps)</div></div>
-      <div class="stat"><div class="v">0<span class="u"> ร้าน</span></div><div class="l">คู่แข่ง local ที่ยิงแอด Meta</div></div>
+      <div class="stat"><div class="v">3<span class="u"> เจ้าใหญ่</span></div><div class="l">คู่แข่งท็อปในโซนที่ยิงแอด Meta แล้ว (คุณยังไม่)</div></div>
       <div class="stat"><div class="v">4.9<span class="u">★</span></div><div class="l">เรตติ้ง Google ของคุณ (สูงสุดในโซน)</div></div>
     </div>
   </header>
@@ -336,22 +336,28 @@
       <div class="box"><h4>1 · ทุกคนยิงให้ “ทักแชท”</h4><p>เกือบทุกร้านยิงแอดเพื่อให้ลูกค้าทักเข้ามาจองคิว (ไม่ใช่ขายของออนไลน์) — Enrich ใช้ปุ่ม “แชทกับเรา” ชัดเจน</p></div>
       <div class="box"><h4>2 · งบเล็ก + ยิงเป็นรอบสั้น</h4><p>ส่วนใหญ่ยิง 1–5 ชิ้นแล้วหยุด มีน้อยรายที่ยิงต่อเนื่องยาว ๆ เป็นระบบ</p></div>
       <div class="box"><h4>3 · ครีเอทีฟยังไม่จัดจ้าน</h4><p>ส่วนใหญ่เป็นภาพนิ่ง/แอดหัวเดียว ยังไม่ค่อยมีวิดีโอรีวิวจริงหรือ before/after ที่ทำมาอย่างตั้งใจ</p></div>
-      <div class="box"><h4>4 · โซนมีนบุรียังไม่มีใครยิงแอด</h4><p>รอบร้านคุณมีร้านทำผมเพียบ (ดูหัวข้อถัดไป) แต่ยังไม่มีเจ้าไหนในละแวกยิงแอด Meta เลย</p></div>
+      <div class="box"><h4>4 · เจ้าถิ่นเริ่มลงสนามแล้ว</h4><p>คู่แข่งใกล้ร้านคุณ 3 เจ้าใหญ่ (Laila, The house salon, HAIR&amp;HER) ยิงแอด Meta แล้ว — ดูรายละเอียดหัวข้อ Google Maps ด้านล่าง</p></div>
     </div>
   </section>
 
   <style>
-    .gm-list{display:flex;flex-direction:column;gap:8px;margin-top:14px}
-    .gm-row{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 14px;box-shadow:var(--shadow)}
-    .gm-row.you{border-color:var(--brass);box-shadow:0 0 0 1px var(--brass),var(--shadow);background:var(--brass-soft)}
+    .gm-list{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+    .gm-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow)}
+    .gm-card.you{border-color:var(--brass);box-shadow:0 0 0 1px var(--brass),var(--shadow);background:var(--brass-soft)}
+    .gm-head{display:flex;align-items:center;gap:12px}
     .gm-rank{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--faint);width:18px;flex:0 0 auto;text-align:center}
     .gm-main{flex:1 1 auto;min-width:0}
     .gm-name{font-weight:700;font-size:14.5px}
     .gm-name .tagme{font-size:11px;color:var(--brass);font-weight:700;margin-left:6px}
-    .gm-sub{font-size:12px;color:var(--muted);margin-top:1px}
-    .gm-rate{flex:0 0 auto;text-align:right;min-width:74px}
+    .gm-sub{font-size:12px;color:var(--muted);margin-top:2px}
+    .gm-rate{flex:0 0 auto;text-align:right;min-width:70px}
     .gm-stars{font-family:var(--mono);font-weight:700;font-size:15px;color:var(--ink);font-variant-numeric:tabular-nums}
     .gm-rev{font-size:11px;color:var(--muted)}
+    .gm-acts{display:flex;gap:8px;margin-top:11px;flex-wrap:wrap}
+    .gmbtn{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;text-decoration:none;padding:9px 13px;border-radius:9px;min-height:40px;line-height:1}
+    .gmbtn.maps{background:var(--surface-2);color:var(--ink);border:1px solid var(--line-strong)}
+    .gmbtn.ads{background:var(--ink);color:var(--ground)}
+    .gmbtn.none{background:transparent;color:var(--faint);border:1px dashed var(--line-strong);font-weight:600}
     .morewrap{margin-top:14px;font-size:13px;color:var(--muted);line-height:2}
     .mchip{display:inline-block;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;margin:2px 3px;font-size:12px;color:var(--ink)}
   </style>
@@ -359,23 +365,50 @@
   <section id="local">
     <div class="eyebrow">คู่แข่งใกล้ร้าน · Google Maps</div>
     <h2>ร้านที่ลูกค้าเจอเวลาเสิร์ช “ร้านทำผม ใกล้ฉัน”</h2>
-    <p class="say">นอกจากคู่แข่งที่ยิงแอด ยังมีร้านทำผมรอบ ๆ หทัยราษฎร์/มีนบุรี ที่แข่งกับคุณตรง ๆ บน Google Maps — เรียงตามจำนวนรีวิว (รีวิวยิ่งเยอะ = ยิ่งถูกเห็นบ่อยเวลาคนเสิร์ช):</p>
+    <p class="say">นอกจากคู่แข่งที่ยิงแอด ยังมีร้านทำผมรอบ ๆ หทัยราษฎร์/มีนบุรี ที่แข่งกับคุณตรง ๆ บน Google Maps — เรียงตามจำนวนรีวิว (รีวิวยิ่งเยอะ = ยิ่งถูกเห็นบ่อยเวลาคนเสิร์ช) · แตะ <b>📍 Maps</b> ดูรีวิว/รูปได้ · ร้านที่มีป้าย <b>⚡ ยิงแอด</b> กด "ดูแอด" ดูครีเอทีฟจริงได้:</p>
     <div class="gm-list">
-      <div class="gm-row"><div class="gm-rank">1</div><div class="gm-main"><div class="gm-name">Laila Hair Salon</div><div class="gm-sub">มีนบุรี · ศูนย์แก้ผมเสีย/ยืดผม — ทับไลน์เคราตินของคุณโดยตรง</div></div><div class="gm-rate"><div class="gm-stars">4.8★</div><div class="gm-rev">100 รีวิว</div></div></div>
-      <div class="gm-row"><div class="gm-rank">2</div><div class="gm-main"><div class="gm-name">The house salon หทัยราษฎร์</div><div class="gm-sub">ถ.หทัยราษฎร์ (ถนนเดียวกับร้านคุณ) · เจ้าถิ่นตัวจริง</div></div><div class="gm-rate"><div class="gm-stars">4.8★</div><div class="gm-rev">82 รีวิว</div></div></div>
-      <div class="gm-row"><div class="gm-rank">3</div><div class="gm-main"><div class="gm-name">HAIR&amp;HER ตลาดมีนบุรี</div><div class="gm-sub">เสริมความงามครบวงจร · ชูสโลแกน “เบอร์หนึ่งเรื่องผม”</div></div><div class="gm-rate"><div class="gm-stars">4.1★</div><div class="gm-rev">75 รีวิว</div></div></div>
-      <div class="gm-row you"><div class="gm-rank">★</div><div class="gm-main"><div class="gm-name">DearLady Salon <span class="tagme">← ร้านคุณ</span></div><div class="gm-sub">เรตติ้งดีที่สุดในโซน แต่จำนวนรีวิวยังตาม 3 เจ้าบน</div></div><div class="gm-rate"><div class="gm-stars">4.9★</div><div class="gm-rev">46 รีวิว</div></div></div>
-      <div class="gm-row"><div class="gm-rank">4</div><div class="gm-main"><div class="gm-name">SR barbershop</div><div class="gm-sub">หทัยราษฎร์ · บาร์เบอร์ชาย (คนละกลุ่มลูกค้า)</div></div><div class="gm-rate"><div class="gm-stars">4.9★</div><div class="gm-rev">52 รีวิว</div></div></div>
-      <div class="gm-row"><div class="gm-rank">5</div><div class="gm-main"><div class="gm-name">1988 Hair Studio</div><div class="gm-sub">ปากซอยหทัยราษฎร์ · บาร์เบอร์ชาย</div></div><div class="gm-rate"><div class="gm-stars">4.5★</div><div class="gm-rev">52 รีวิว</div></div></div>
-      <div class="gm-row"><div class="gm-rank">6</div><div class="gm-main"><div class="gm-name">magical salon</div><div class="gm-sub">รามอินทรา 1 · ทำผมทั่วไป</div></div><div class="gm-rate"><div class="gm-stars">4.6★</div><div class="gm-rev">26 รีวิว</div></div></div>
-      <div class="gm-row"><div class="gm-rank">7</div><div class="gm-main"><div class="gm-name">Beauty Corner By Onpreeya</div><div class="gm-sub">ถ.หทัยราษฎร์ (เดอะโกรฟ แม็กซ์แวลู่)</div></div><div class="gm-rate"><div class="gm-stars">4.4★</div><div class="gm-rev">14 รีวิว</div></div></div>
-      <div class="gm-row"><div class="gm-rank">8</div><div class="gm-main"><div class="gm-name">ร้านเสริมสวย โฟกัส หทัยราษฎร์</div><div class="gm-sub">ซอยหทัยราษฎร์ 2</div></div><div class="gm-rate"><div class="gm-stars">5.0★</div><div class="gm-rev">3 รีวิว</div></div></div>
+      <div class="gm-card">
+        <div class="gm-head"><div class="gm-rank">1</div><div class="gm-main"><div class="gm-name">Laila Hair Salon <span class="pill hi">⚡ ยิงแอด</span></div><div class="gm-sub">มีนบุรี · ศูนย์แก้ผมเสีย/ยืดผม — ทับไลน์เคราตินของคุณโดยตรง</div></div><div class="gm-rate"><div class="gm-stars">4.8★</div><div class="gm-rev">100 รีวิว</div></div></div>
+        <div class="gm-acts"><a class="gmbtn maps" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Laila+Hair+Salon+ยืดผม+มีนบุรี">📍 รีวิว/รูปบน Maps</a><a class="gmbtn ads" target="_blank" rel="noopener" href="https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=TH&amp;media_type=all&amp;search_type=page&amp;view_all_page_id=114541869971022">ดูแอด Meta →</a></div>
+      </div>
+      <div class="gm-card">
+        <div class="gm-head"><div class="gm-rank">2</div><div class="gm-main"><div class="gm-name">The house salon หทัยราษฎร์ <span class="pill hi">⚡ ยิงแอด</span></div><div class="gm-sub">ถ.หทัยราษฎร์ (ถนนเดียวกับร้านคุณ) · เจ้าถิ่น + ยิงต่อเนื่องข้ามปี</div></div><div class="gm-rate"><div class="gm-stars">4.8★</div><div class="gm-rev">82 รีวิว</div></div></div>
+        <div class="gm-acts"><a class="gmbtn maps" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=The+house+salon+หทัยราษฎร์">📍 รีวิว/รูปบน Maps</a><a class="gmbtn ads" target="_blank" rel="noopener" href="https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=TH&amp;media_type=all&amp;search_type=page&amp;view_all_page_id=794901713697467">ดูแอด Meta →</a></div>
+      </div>
+      <div class="gm-card">
+        <div class="gm-head"><div class="gm-rank">3</div><div class="gm-main"><div class="gm-name">HAIR&amp;HER ตลาดมีนบุรี <span class="pill hi">⚡ ยิงแอด</span></div><div class="gm-sub">เสริมความงามครบวงจร · ชูสโลแกน “เบอร์หนึ่งเรื่องผม”</div></div><div class="gm-rate"><div class="gm-stars">4.1★</div><div class="gm-rev">75 รีวิว</div></div></div>
+        <div class="gm-acts"><a class="gmbtn maps" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=HAIR+HER+ตลาดมีนบุรี">📍 รีวิว/รูปบน Maps</a><a class="gmbtn ads" target="_blank" rel="noopener" href="https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=TH&amp;media_type=all&amp;search_type=page&amp;view_all_page_id=109157463836497">ดูแอด Meta →</a></div>
+      </div>
+      <div class="gm-card you">
+        <div class="gm-head"><div class="gm-rank">★</div><div class="gm-main"><div class="gm-name">DearLady Salon <span class="tagme">← ร้านคุณ</span> <span class="pill na">ยังไม่ยิงแอด</span></div><div class="gm-sub">เรตติ้งดีที่สุดในโซน แต่จำนวนรีวิวยังตาม 3 เจ้าบน + ยังไม่ลงสนามแอด</div></div><div class="gm-rate"><div class="gm-stars">4.9★</div><div class="gm-rev">46 รีวิว</div></div></div>
+        <div class="gm-acts"><a class="gmbtn maps" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=DearLady+Salon+หทัยราษฎร์+มีนบุรี">📍 ดูหน้าร้านคุณบน Maps</a></div>
+      </div>
+      <div class="gm-card">
+        <div class="gm-head"><div class="gm-rank">4</div><div class="gm-main"><div class="gm-name">SR barbershop</div><div class="gm-sub">หทัยราษฎร์ · บาร์เบอร์ชาย (คนละกลุ่มลูกค้า)</div></div><div class="gm-rate"><div class="gm-stars">4.9★</div><div class="gm-rev">52 รีวิว</div></div></div>
+        <div class="gm-acts"><a class="gmbtn maps" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=SR+barbershop+หทัยราษฎร์">📍 รีวิว/รูปบน Maps</a><span class="gmbtn none">ไม่พบแอด Meta</span></div>
+      </div>
+      <div class="gm-card">
+        <div class="gm-head"><div class="gm-rank">5</div><div class="gm-main"><div class="gm-name">1988 Hair Studio</div><div class="gm-sub">ปากซอยหทัยราษฎร์ · บาร์เบอร์ชาย</div></div><div class="gm-rate"><div class="gm-stars">4.5★</div><div class="gm-rev">52 รีวิว</div></div></div>
+        <div class="gm-acts"><a class="gmbtn maps" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=1988+Hair+Studio+หทัยราษฎร์">📍 รีวิว/รูปบน Maps</a><span class="gmbtn none">ไม่พบแอด Meta</span></div>
+      </div>
+      <div class="gm-card">
+        <div class="gm-head"><div class="gm-rank">6</div><div class="gm-main"><div class="gm-name">magical salon</div><div class="gm-sub">รามอินทรา 1 · ทำผมทั่วไป</div></div><div class="gm-rate"><div class="gm-stars">4.6★</div><div class="gm-rev">26 รีวิว</div></div></div>
+        <div class="gm-acts"><a class="gmbtn maps" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=magical+salon+รามอินทรา">📍 รีวิว/รูปบน Maps</a><span class="gmbtn none">ไม่พบแอด Meta</span></div>
+      </div>
+      <div class="gm-card">
+        <div class="gm-head"><div class="gm-rank">7</div><div class="gm-main"><div class="gm-name">Beauty Corner By Onpreeya</div><div class="gm-sub">ถ.หทัยราษฎร์ (เดอะโกรฟ แม็กซ์แวลู่)</div></div><div class="gm-rate"><div class="gm-stars">4.4★</div><div class="gm-rev">14 รีวิว</div></div></div>
+        <div class="gm-acts"><a class="gmbtn maps" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Beauty+Corner+By+Onpreeya+หทัยราษฎร์">📍 รีวิว/รูปบน Maps</a><span class="gmbtn none">ไม่พบแอด Meta</span></div>
+      </div>
+      <div class="gm-card">
+        <div class="gm-head"><div class="gm-rank">8</div><div class="gm-main"><div class="gm-name">ร้านเสริมสวย โฟกัส หทัยราษฎร์</div><div class="gm-sub">ซอยหทัยราษฎร์ 2</div></div><div class="gm-rate"><div class="gm-stars">5.0★</div><div class="gm-rev">3 รีวิว</div></div></div>
+        <div class="gm-acts"><a class="gmbtn maps" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=ร้านเสริมสวย+โฟกัส+หทัยราษฎร์">📍 รีวิว/รูปบน Maps</a><span class="gmbtn none">ไม่พบแอด Meta</span></div>
+      </div>
     </div>
     <div class="morewrap">ร้านใกล้เคียงอื่น ๆ ที่เจอบนแผนที่/เสิร์ช:
       <span class="mchip">ARM' Studio (รามอินทรา 74)</span><span class="mchip">Sarang Hair (The Promenade)</span><span class="mchip">Moshi hair design</span><span class="mchip">Cherry Salon</span><span class="mchip">Butter Hair &amp; Nails</span><span class="mchip">BELTA BEAUTY</span><span class="mchip">Anna Beauty &amp; Tattoo</span><span class="mchip">Tongsub's Hair Studio</span><span class="mchip">ร้านเสริมสวยไฮโล (บิ๊กซี)</span><span class="mchip">ดีเทล แฮร์ (สามวา)</span>
     </div>
-    <div class="lead-op" style="margin-top:16px"><b>อ่านเกม:</b> ร้านคุณ <b>เรตติ้งสูงสุดในละแวก (4.9★)</b> — ฝีมือไม่เป็นรองใคร แต่ “จำนวนรีวิว/การถูกมองเห็น” ยังตามเจ้าใหญ่ (Laila 100, The house 82, HAIR&amp;HER 75) และที่สำคัญ <b>ไม่มีร้าน local เจ้าไหนในโซนนี้ยิงแอด Meta เลย</b> → การยิงแอดจะช่วยทั้ง “ดึงลูกค้าใหม่” และ “เร่งจำนวนรีวิว” ให้ไล่แซงเจ้าถิ่นได้พร้อมกัน</div>
-    <p style="font-size:12px;margin-top:8px;color:var(--faint)">ข้อมูลเรตติ้ง/รีวิวจาก Google Maps · 10 ก.ค. 2026</p>
+    <div class="lead-op" style="margin-top:16px"><b>อ่านเกม (อัปเดตสำคัญ):</b> เจ้าใหญ่ในโซนคุณ <b>3 ร้านเริ่มยิงแอด Meta แล้ว</b> — Laila (100 รีวิว), The house salon (82, ถนนเดียวกับคุณ, ยิงต่อเนื่องข้ามปี) และ HAIR&amp;HER (75) — แถมรีวิวยังนำคุณอยู่ ส่วนร้านคุณ <b>เรตติ้งดีที่สุด (4.9★) แต่ยังไม่เคยยิงแอดเลย</b> = เป็นร้านคุณภาพท็อปเจ้าเดียวที่ยังไม่ลงสนาม ยิ่งช้ายิ่งเสียลูกค้าที่กำลังเสิร์ชให้คู่แข่ง — <b>แต่ยังไม่สาย</b> เพราะเจ้าที่ยิงยังใช้ครีเอทีฟธรรมดา เราแซงด้วยงานที่ดีกว่า + ยิงต่อเนื่องเป็นระบบได้</div>
+    <p style="font-size:12px;margin-top:8px;color:var(--faint)">เรตติ้ง/รีวิวจาก Google Maps · สถานะยิงแอดจาก Meta Ad Library · 10 ก.ค. 2026</p>
   </section>
 
   <section id="you">
@@ -393,7 +426,7 @@
   <section id="opportunity">
     <div class="eyebrow">ทำไมนี่คือโอกาสของคุณ</div>
     <h2>ช่องว่างที่ Dear Lady Salon เข้าไปชนะได้</h2>
-    <div class="lead-op"><b>โซนมีนบุรี/หทัยราษฎร์ เกือบว่างเปล่า</b> — คู่แข่งในละแวกที่ยิงแอดมีน้อยมาก ร้านคุณเข้าไปเป็นเจ้าแรก ๆ ในพื้นที่ได้เปรียบเรื่องการมองเห็น</div>
+    <div class="lead-op"><b>เจ้าใหญ่เพิ่งเริ่มยิง — ยังไม่สาย</b> คู่แข่งท็อป 3 ร้านเริ่มยิงแอดแล้วก็จริง แต่ยังยิงเบาและครีเอทีฟธรรมดา ร้านคุณเรตติ้งดีที่สุดในโซน (4.9★) ถ้าลงสนามตอนนี้ด้วยครีเอทีฟที่ดีกว่า + ยิงต่อเนื่องเป็นระบบ ยังแซงทันสบาย</div>
     <ul class="clean">
       <li><b>ครีเอทีฟที่ดีกว่าจะเด่นทันที</b> — งานเคราตินสด/ทำสีของร้านคุณ ถ่าย before/after จริง + วิดีโอรีวิว จะโดดกว่าคู่แข่งที่ยิงภาพนิ่งธรรมดา</li>
       <li><b>ยิงต่อเนื่องเป็นระบบ = แซงคนที่ยิงเป็นรอบ</b> — เราวางแอดให้รันยาวและหมุนครีเอทีฟสม่ำเสมอ ไม่ใช่ยิง ๆ หยุด ๆ</li>
